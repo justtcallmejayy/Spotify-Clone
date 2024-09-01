@@ -1,2 +1,53 @@
 /* This is a CSS file for my Spotify clone. */
 
+* {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  background-color: black;
+  color: white;
+  overflow: hidden;
+}
+
+/* Below is the styling for the Main */
+
+.main {
+  display: flex;
+  height: 100vh;
+}
+
+/* Below is the styling for Sidebar */
+
+.sidebar {
+  background-color: yellow;
+  width: 340px;
+  border-radius: 1rem;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+.nav{
+    background-color: #121212;
+    border-radius: 1rem;
+}
+
+/* Below is the styling for Main Content */
+
+.mainContent {
+  background-color: #121212;
+  flex: 1;
+  border-radius: 1rem;
+  overflow: auto;
+}
+
+/* Below is the styling for the Music Player */
+
+.musicPlayer {
+  background-color: black;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 72px;
+}
