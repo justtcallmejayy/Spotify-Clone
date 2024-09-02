@@ -23,14 +23,54 @@
   border-radius: 1rem;
 }
 
-a{
-    color: white;
-    text-decoration: none;
+a {
+  color: white;
+  text-decoration: none;
 }
 
-.nav{
-    background-color: #121212;
-    border-radius: 1rem;
+.nav {
+  background-color: #121212;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100px;
+  padding: 0.5rem 0.75rem;
+}
+
+.nav-option {
+  line-height: 2.5rem;
+  opacity: 0.7;
+  padding: 0.5rem 0.75rem;
+}
+
+.nav-option:hover {
+  opacity: 1;
+}
+
+.nav-option i {
+  font-size: 1.25rem;
+}
+
+.nav-option a {
+  font-size: 1rem;
+  margin-left: 1rem;
+}
+
+/* Below is the styling for Your Library */
+
+.library{
+  background-color: #121212;
+  border-radius: 1rem;
+}
+
+.options{
+  display: flex;
+}
+
+.lib-option img {
+  height: 1.25rem;
+  width: 1.25rem;
 }
 
 /* Below is the styling for Main Content */
