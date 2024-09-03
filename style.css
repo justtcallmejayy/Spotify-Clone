@@ -1,93 +1,93 @@
 /* This is a CSS file for my Spotify clone. */
 
 * {
-  font-family: "Montserrat", sans-serif;
-  margin: 0;
-  background-color: black;
-  color: white;
-  overflow: hidden;
+	font-family: "Montserrat", sans-serif;
+	margin: 0;
+	background-color: black;
+	color: white;
+	overflow: hidden;
 }
 
 /* Below is the styling for the Main */
 
 .main {
-  display: flex;
-  height: 100vh;
+	display: flex;
+	height: 100vh;
 }
 
 /* Below is the styling for Sidebar */
 
 .sidebar {
-  background-color: yellow;
-  width: 340px;
-  border-radius: 1rem;
+	background-color: darkgreen;
+	width: 340px;
+	border-radius: 1rem;
 }
 
 a {
-  color: white;
-  text-decoration: none;
+	color: white;
+	text-decoration: none;
 }
 
 .nav {
-  background-color: #121212;
-  border-radius: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100px;
-  padding: 0.5rem 0.75rem;
+	background-color: #121212;
+	border-radius: 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 100px;
+	padding: 0.5rem 0.75rem;
 }
 
 .nav-option {
-  line-height: 2.5rem;
-  opacity: 0.7;
-  padding: 0.5rem 0.75rem;
+	line-height: 2.5rem;
+	opacity: 0.7;
+	padding: 0.5rem 0.75rem;
 }
 
 .nav-option:hover {
-  opacity: 1;
+	opacity: 1;
 }
 
 .nav-option i {
-  font-size: 1.25rem;
+	font-size: 1.25rem;
 }
 
 .nav-option a {
-  font-size: 1rem;
-  margin-left: 1rem;
+	font-size: 1rem;
+	margin-left: 1rem;
 }
 
 /* Below is the styling for Your Library */
 
-.library{
-  background-color: #121212;
-  border-radius: 1rem;
+.library {
+	background-color: #121212;
+	border-radius: 1rem;
 }
 
-.options{
-  display: flex;
+.options {
+	display: flex;
 }
 
 .lib-option img {
-  height: 1.25rem;
-  width: 1.25rem;
+	height: 1.25rem;
+	width: 1.25rem;
 }
 
 /* Below is the styling for Main Content */
 
 .mainContent {
-  background-color: #121212;
-  flex: 1;
-  border-radius: 1rem;
-  overflow: auto;
+	background-color: #121212;
+	flex: 1;
+	border-radius: 1rem;
+	overflow: auto;
 }
 
 /* Below is the styling for the Music Player */
 
 .musicPlayer {
-  background-color: black;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  height: 72px;
+	background-color: black;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 72px;
 }
