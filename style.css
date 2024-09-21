@@ -1,157 +1,211 @@
 /* This is a CSS file for my Spotify clone. */
 
 * {
-	font-family: "Montserrat", sans-serif;
-	margin: 0;
-	background-color: #121212;
-	color: white;
-	overflow: hidden;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  background-color: #121212;
+  color: white;
+  overflow: hidden;
+  /* box-sizing: border-box; */
 }
 
 /* Below is the styling for the Main */
 
 .main {
-	display: flex;
-	height: 100vh;
-	padding: 0.5rem;
-
+  display: flex;
+  height: 100vh;
+  padding: 0.5rem;
 }
 
 /* Below is the styling for Sidebar */
 
 .sidebar {
-	background-color: #000;
-	width: 340px;
-	border-radius: 1rem;
-	margin-right: 0.5rem;
+  background-color: #000;
+  width: 340px;
+  border-radius: 1rem; /* 1rem = 16px*/
+  margin-right: 0.5rem;
 }
 
 a {
-	color: white;
-	text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
 .nav {
-	background-color: #121212;
-	border-radius: 1rem;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	height: 100px;
-	padding: 0.5rem 0.75rem;
+  background-color: #121212;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100px;
+  padding: 0.5rem 0.75rem;
 }
 
 .nav-option {
-	line-height: 2.5rem;
-	opacity: 0.7;
-	padding: 0.5rem 0.75rem;
+  line-height: 2.5rem;
+  opacity: 0.7;
+  padding: 0.5rem 0.75rem;
 }
 
 .nav-option:hover {
-	opacity: 1;
+  opacity: 1;
 }
 
 .nav-option i {
-	font-size: 1.25rem;
+  font-size: 1.25rem;
 }
 
 .nav-option a {
-	font-size: 1rem;
-	margin-left: 1rem;
+  font-size: 1rem;
+  margin-left: 1rem;
 }
 
 /* Below is the styling for Your Library */
 
 .library {
-	background-color: #121212;
-	border-radius: 1rem;
-	height: 100%;
-	margin-top: 0.5rem;
-	padding: 0.5rem 0.75rem;
+  background-color: #121212;
+  border-radius: 1rem;
+  height: 100%;
+  margin-top: 0.5rem;
+  padding: 0.5rem 0.75rem;
 }
 
 .options {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .lib-option img {
-	height: 1.25rem;
-	width: 1.25rem;
+  height: 1.25rem;
+  width: 1.25rem;
 }
 
-.icons{
-	font-size: 1.25rem;
-	display: flex;
+.icons {
+  font-size: 1.25rem;
+  display: flex;
 }
 
-.icons i{
-	opacity: 0.7;
-	margin-right: 1rem;
+.icons i {
+  opacity: 0.7;
+  margin-right: 1rem;
 }
 
-.icons i:hover{
-    opacity: 1;
+.icons i:hover {
+  opacity: 1;
 }
 
 /* Below is the styling for Library Badge */
 
-.box{
-	height: 10rem;
-	background-color: #232323;
-	border-radius: 0.75rem;
-	margin: 0.75rem 0 1.75rem 0;
-	padding: 1rem 1.25rem;
+.box {
+  height: 10rem;
+  background-color: #232323;
+  border-radius: 0.75rem;
+  margin: 0.75rem 0 1.75rem 0;
+  padding: 1rem 1.25rem;
 }
 
-.box-p1{
-	font-size: 1rem;
-	font-weight: 500;
+.box-p1 {
+  font-size: 1rem;
+  font-weight: 500;
 }
 
-.box-p2{
-    font-size: 0.85rem;
-    opacity: 0.9;
+.box-p2 {
+  font-size: 0.85rem;
+  opacity: 0.9;
 }
 
-.badge{
-	background-color: white;
-	border-radius: 100px;
-	color: black;
-	font-weight: 700;
-	padding: 0.25rem 1rem;
-	border: none;
-	margin-top: 0.5rem;
-	height: 2rem;
-	width: fit-content;
+.badge {
+  background-color: white;
+  border-radius: 100px;
+  color: black;
+  font-weight: 700;
+  padding: 0.25rem 1rem;
+  border: none;
+  margin-top: 0.5rem;
+  height: 2rem;
+  width: fit-content;
+}
+
+.dark-badge {
+  background-color: #000;
+  color: white;
 }
 
 /* Below is the styling for Nav Bar */
-.sticky-nav{
-	position: sticky;
-	top: 0;
-	background-color: #121212;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  background-color: #121212;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sticky-nav-icons {
+  margin-left: 0.75rem;
+}
+
+.sticky-nav-options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-item {
+  margin-right: 1rem;
 }
 
 /* Below is the styling for Main Content */
 
 .mainContent {
-	background-color: #121212;
-	flex: 1;
-	border-radius: 1rem;
-	overflow: auto;
+  background-color: #121212;
+  flex: 1;
+  border-radius: 1rem;
+  overflow: auto;
+  padding: 0 1.5rem 0 1.5rem;
+}
+
+/* Below is the code for Albums */
+
+.card {
+  background-color: #232323;
+  width: 150px;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.cards-container {
+  display: flex;
+}
+
+.card-img {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.card-title {
+  font-weight: 600;
+}
+
+.card-info {
+  font-size: 0.75rem;
 }
 
 /* Below is the styling for the Music Player */
 
 .musicPlayer {
-	background-color: black;
-	position: fixed;
-	bottom: 0;
-	width: 100%;
-	height: 72px;
+  background-color: black;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 72px;
+}
+
+/* Below are the media quearies for buttons */
+
+@media (max-width: 1000px) {
+  .hide {
+    display: none;
+  }
 }
