@@ -140,6 +140,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 10;
 }
 
 .sticky-nav-icons {
@@ -190,6 +191,31 @@ a {
 
 .card-info {
   font-size: 0.75rem;
+}
+
+/* Below is the code for Footer Line */
+
+.footer {
+  /* background-color: #121212;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2rem;
+  color: white;
+  font-size: 0.85rem; */
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.line{
+  width: 90%;
+  height: 40%;
+  border-top: 1px solid white;
+  opacity: 0.4;
+
 }
 
 /* Below is the styling for the Music Player */
