@@ -10,7 +10,6 @@
 
 <hr>
 
-
 <h3 align="left">Connect with me:</h3>
 <p align="left">
   <a href="https://www.linkedin.com/in/jaychoksi18/" target="blank">
@@ -24,7 +23,6 @@
   </a>
 </p>
   <hr>
-
 
 <h3 align="left">Languages and Tools:</h3>
 <p align="left">
@@ -44,10 +42,20 @@
 
 <hr>
 
+<h3 align="left">Features:</h3>
+<ul>
+  <li>🎵 **Spotify Clone**: A responsive web application mimicking the Spotify interface, built using **HTML**, **CSS**, **JavaScript**, and **Bootstrap**.</li>
+  <li>📱 **Mobile View**: The web app is fully responsive and adapts seamlessly to mobile devices. The **sidebar** turns into a **hamburger menu** on small screens (less than 768px), providing a more user-friendly mobile experience.</li>
+  <li>🔄 **Dynamic Layout**: The application adjusts its layout based on the screen size. On larger screens, the sidebar remains visible, while on smaller screens, it collapses into a toggleable hamburger menu.</li>
+  <li>🎨 **Dark Theme**: The design uses a **dark theme** with high contrast to make it easy to navigate through various sections such as Home, Search, and Your Library.</li>
+  <li>🎧 **Responsive Music Player**: The bottom bar contains a fixed music player that allows users to control the audio while navigating through the site. This also adjusts based on the screen size for mobile optimization.</li>
+</ul>
+
+<hr>
 
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=justtcallmejayy&layout=compact&theme=tokyonight" alt="Top Languages" />
 </p>
 
-  <br />
+<br />
 </div>
