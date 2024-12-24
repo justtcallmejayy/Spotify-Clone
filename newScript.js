@@ -1,30 +1,37 @@
-// Below is the initial setup for Spotify Clone, so that i could add the functionality of
-// 1.) Hamburger menu
-
-// Select the hamburger and sidebar elements
+// Select elements
 const hamburger = document.querySelector('.hamburger');
 const sidebar = document.querySelector('.sidebar');
+const overlay = document.querySelector('.overlay');
 
-// Toggle sidebar visibility when hamburger is clicked
-hamburger.addEventListener('click', () => {
+// Toggle sidebar visibility
+function toggleSidebar() {
+  const isVisible = sidebar.classList.contains('visible');
   sidebar.classList.toggle('visible');
-});
+  overlay.classList.toggle('visible');
+  hamburger.setAttribute('aria-expanded', !isVisible);
+}
 
-// Close the sidebar when clicking outside the sidebar or hamburger
-document.addEventListener('click', (event) => {
-  if (!sidebar.contains(event.target) && !hamburger.contains(event.target)) {
-    sidebar.classList.remove('visible');
+// Event listener for hamburger click
+hamburger.addEventListener('click', toggleSidebar);
+
+// Close sidebar when clicking outside
+overlay.addEventListener('click', toggleSidebar);
+
+// Close sidebar on 'Escape' key press
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && sidebar.classList.contains('visible')) {
+    toggleSidebar();
   }
 });
 
-// Mobile view: Close sidebar on resizing if the screen is larger than 768px
+// Close sidebar when resizing to larger screen
 function resetSidebarVisibility() {
-  const mediaQuery = window.matchMedia('(min-width: 769px)');
-  if (mediaQuery.matches) {
+  if (window.innerWidth > 768) {
     sidebar.classList.remove('visible');
+    overlay.classList.remove('visible');
+    hamburger.setAttribute('aria-expanded', 'false');
   }
 }
 
-// Run on load and resize to check the screen width
 window.addEventListener('resize', resetSidebarVisibility);
 resetSidebarVisibility();
