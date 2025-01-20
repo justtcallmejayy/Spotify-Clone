@@ -3,12 +3,22 @@ const hamburger = document.querySelector('.hamburger');
 const sidebar = document.querySelector('.sidebar');
 const overlay = document.querySelector('.overlay');
 
+// Utility: Toggle visibility and accessibility
+function toggleVisibility(element, isVisible) {
+  element.classList.toggle('visible', isVisible);
+}
+
+function updateAriaAttributes(isVisible) {
+  hamburger.setAttribute('aria-expanded', isVisible);
+  sidebar.setAttribute('aria-hidden', !isVisible);
+}
+
 // Toggle sidebar visibility
 function toggleSidebar() {
   const isVisible = sidebar.classList.contains('visible');
-  sidebar.classList.toggle('visible');
-  overlay.classList.toggle('visible');
-  hamburger.setAttribute('aria-expanded', !isVisible);
+  toggleVisibility(sidebar, !isVisible);
+  toggleVisibility(overlay, !isVisible);
+  updateAriaAttributes(!isVisible);
 }
 
 // Event listener for hamburger click
@@ -24,14 +34,20 @@ document.addEventListener('keydown', (event) => {
   }
 });
 
-// Close sidebar when resizing to larger screen
+// Close sidebar when resizing to larger screen (debounced)
 function resetSidebarVisibility() {
   if (window.innerWidth > 768) {
-    sidebar.classList.remove('visible');
-    overlay.classList.remove('visible');
-    hamburger.setAttribute('aria-expanded', 'false');
+    toggleVisibility(sidebar, false);
+    toggleVisibility(overlay, false);
+    updateAriaAttributes(false);
   }
 }
 
-window.addEventListener('resize', resetSidebarVisibility);
+let resizeTimeout;
+window.addEventListener('resize', () => {
+  clearTimeout(resizeTimeout);
+  resizeTimeout = setTimeout(resetSidebarVisibility, 200);
+});
+
+// Initial visibility reset
 resetSidebarVisibility();
