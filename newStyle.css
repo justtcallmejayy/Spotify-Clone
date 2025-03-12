@@ -380,3 +380,28 @@ a {
     width: 100%;
   }
 }
+
+@media only screen and (max-width: 393px) {
+  /* Adjust styles for the iPhone 16 Pro */
+  .sidebar {
+    /* For instance, set sidebar width to full screen for mobile */
+    width: 100%;
+    left: -100%; /* Start hidden */
+  }
+  .sidebar.visible {
+    left: 0;
+  }
+
+  .hamburger {
+    /* Ensure the hamburger menu is visible */
+    display: block;
+  }
+
+  .main-content {
+    /* Adjust padding/margins for smaller screen */
+    margin: 0;
+    padding: 1rem;
+  }
+
+  /* Additional mobile-specific adjustments */
+}

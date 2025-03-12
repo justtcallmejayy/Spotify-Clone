@@ -1,53 +1,30 @@
-// Select elements
-const hamburger = document.querySelector('.hamburger');
-const sidebar = document.querySelector('.sidebar');
-const overlay = document.querySelector('.overlay');
+// Below is the initial setup for Spotify Clone, so that i could add the functionality of
+// 1.) Hamburger menu
 
-// Utility: Toggle visibility and accessibility
-function toggleVisibility(element, isVisible) {
-  element.classList.toggle('visible', isVisible);
-}
+// Select the hamburger and sidebar elements
+const hamburger = document.querySelector(".hamburger");
+const sidebar = document.querySelector(".sidebar");
 
-function updateAriaAttributes(isVisible) {
-  hamburger.setAttribute('aria-expanded', isVisible);
-  sidebar.setAttribute('aria-hidden', !isVisible);
-}
+// Toggle sidebar visibility when hamburger is clicked
+hamburger.addEventListener("click", () => {
+  sidebar.classList.toggle("visible");
+});
 
-// Toggle sidebar visibility
-function toggleSidebar() {
-  const isVisible = sidebar.classList.contains('visible');
-  toggleVisibility(sidebar, !isVisible);
-  toggleVisibility(overlay, !isVisible);
-  updateAriaAttributes(!isVisible);
-}
-
-// Event listener for hamburger click
-hamburger.addEventListener('click', toggleSidebar);
-
-// Close sidebar when clicking outside
-overlay.addEventListener('click', toggleSidebar);
-
-// Close sidebar on 'Escape' key press
-document.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape' && sidebar.classList.contains('visible')) {
-    toggleSidebar();
+// Close the sidebar when clicking outside the sidebar or hamburger
+document.addEventListener("click", (event) => {
+  if (!sidebar.contains(event.target) && !hamburger.contains(event.target)) {
+    sidebar.classList.remove("visible");
   }
 });
 
-// Close sidebar when resizing to larger screen (debounced)
+// Mobile view: Close sidebar on resizing if the screen is larger than 768px
 function resetSidebarVisibility() {
-  if (window.innerWidth > 768) {
-    toggleVisibility(sidebar, false);
-    toggleVisibility(overlay, false);
-    updateAriaAttributes(false);
+  const mediaQuery = window.matchMedia("(min-width: 769px)");
+  if (mediaQuery.matches) {
+    sidebar.classList.remove("visible");
   }
 }
 
-let resizeTimeout;
-window.addEventListener('resize', () => {
-  clearTimeout(resizeTimeout);
-  resizeTimeout = setTimeout(resetSidebarVisibility, 200);
-});
-
-// Initial visibility reset
+// Run on load and resize to check the screen width
+window.addEventListener("resize", resetSidebarVisibility);
 resetSidebarVisibility();
