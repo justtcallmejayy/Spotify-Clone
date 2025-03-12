@@ -37,6 +37,8 @@ A responsive web application inspired by Spotify, built with HTML, CSS, JavaScri
 - [Bootstrap](https://getbootstrap.com/)
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
+- #MOBILE VIEW
+
 ## Getting Started
 
 To get a local copy up and running, follow these steps:
